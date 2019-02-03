@@ -1,0 +1,2 @@
+#!/usr/bin/env zsh
+networksetup -getinfo Wi-Fi | grep 'Wi-Fi' | awk '{print $3}'

@@ -1,0 +1,6 @@
+original ="8f111d100ea459f68d333d63a8ef2205"
+daily = "$(md5sum /etc/crontab)"
+
+if ["$daily" != "$original"] ; then
+	mail -s "Crontab has been modified" root
+fi
